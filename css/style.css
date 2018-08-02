@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300|Lato:300,400|Open+Sans|Source+Sans+Pro:400,600,700');
+
+
 :root {
     --text-color-head: #f4dcc7;
+    --text-second-color: #bb8048;
 }
 
 * {
@@ -10,6 +14,7 @@
     text-decoration: none;
     outline: 0;
     /* font-size: 10px; */
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 section {
@@ -18,10 +23,20 @@ section {
 
 h1 {
     font-size: 32px;
+    font-weight: 500;
 }
 
 h2 {
     font-size: 15px;
+    font-style: italic;
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+input[type=button]{
+    cursor: pointer;
 }
 
 /* TOP/MENU */
@@ -37,8 +52,9 @@ header {
 
 header a {
     margin-left: 45px;
-    font-size: 28px;
+    font-size: 32.6px;
     color: white;
+    font-family: 'Dosis', sans-serif;
 }
 
 header nav {
@@ -47,7 +63,13 @@ header nav {
     /* right: 100px; */
     height: 100%;
 }
-
+header nav a {
+    color: var(--text-color-head);
+    font-size: 18px;
+    margin-left: 0px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 900;
+}
 header nav ul li {
     float: left;
     box-sizing: border-box;
@@ -77,14 +99,14 @@ header nav ul {
 }
 
 #cta #yr-cplt {
-    font-size: 42px;
-    /* background-color: aquamarine; */
-    width: 300px;
+    font-size: 60px;
+    width: 500px;
     position: relative;
     left: 47%;
-    top: 20%;
-    /* transform: translateX(-10%); */
+    top: 19%;
     color: white;
+    font-weight: 300;
+    font-family: 'Lato', sans-serif;
 }
 
 #cta #yr-cplt span ::after {
@@ -94,13 +116,16 @@ header nav ul {
 
 #cta #yr-cplt span {
     color: black;
+    font-family: 'Lato', sans-serif;
     /* background-color: red; */
 }
 
 #cta #yr-cplt input {
     background-color: black;
     color: white;
-    padding: 2.5% 8% 2.5% 8%;
+    font-weight: 800;
+    padding: 2.5% 6% 2.5% 6%;
+    font-size: 20px;
     box-sizing: border-box;
     /* padding-top: 5px; */
     border-radius: 15px;
@@ -130,11 +155,22 @@ section#howItWorks .icon {
 section#PricingSystem {
     background-color: #e5e5e5;
     padding: 45px;
+    line-height: 26px;
 }
-
+section#PricingSystem #bg-microphone {
+    /* background-color: aqua; */
+    background-image: url(../img/page/PricingSystem/icon-microphone.png);
+    height: 69px;
+    width: 116px;
+    position: relative;
+    top:-90px;
+    left: 50%;;
+    transform: translateX(-50%);
+    z-index: -1;
+}
 section#PricingSystem #PricingSystem-elements {
     display: flex;
-    width: 75%;
+    width: 70%;
     margin: 0 auto;
 }
 
@@ -147,8 +183,190 @@ section#PricingSystem #PricingSystem-elements #text {
 section#PricingSystem #PricingSystem-elements #text input {
     display: inline;
     padding: 2%;
-    /* width: 100px; */
+    width: 150px;
     background-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
     border: 2px solid #989898;
+    margin-top: 30px;
+    letter-spacing: 3px;
+}
+
+section#PricingSystem h1 span {
+    color: var(--text-second-color);
+}
+
+section#PricingSystem h1::after, section#PricingSystem h2::after {
+    white-space: pre;
+    content: "\A";
+    line-height: 50px;
+}
+
+/* WhatDoWeDo */
+
+section#WhatDoWeDo{
+    text-align: center;
+}
+
+#WhatDoWeDo h1 span {
+    color: var(--text-second-color);
+}
+#WhatDoWeDo p {
+    font-weight: 600;
+}
+#WhatDoWeDo #color-widget p, #WhatDoWeDo #text-widget p{
+    font-weight: 400;
+}
+#color-widget {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    
+}
+.clr-wdg {
+    width: 220px;
+    height: 300px;
+    background-color: #6c533b;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    margin: 27.5px;
+    
+}
+
+.clr-wdg:nth-child(2n+0) {
+    background-color: #34291f;
+}
+
+.clr-wdg:nth-child(3n+0) {
+    background-color: #bb8b60;
+}
+.clr-wdg:nth-child(4n+0) {
+    background-color: #7b7269;
+}
+
+.clr-wdg * {
+    margin: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.clr-wdg img {
+    margin-top: 45px;
+}
+
+.clr-wdg i {
+    position: relative;
+    bottom: 15px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#text-widget {
+    display: grid;
+    grid-template-columns: 265px 265px 265px;
+    grid-template-rows: 190px 190px;
+    grid-row-gap: 50px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    justify-content: space-evenly;
+}
+.txt-wdg {
+    border: 2px solid gray;
+    /* width:265px; */
+    /* height: 190px; */
+    border-radius: 10px;
+    text-align: left;
+
+}
+
+.txt-wdg * {
+    margin: 15px;
+}
+
+.txt-wdg h2 {
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+.txt-wdg p {
+    color: gray;
+    font-size: 13px;
+}
+
+/* FOOTER */
+
+footer {
+    
+    height: 150px;
+    width: 100%;
+    border-bottom: 1px solid var(--text-second-color);
+    position: relative;
+    bottom: 0px;
+    left: 0px;
+}
+footer #foot-msc {
+    /* background-color: red; */
+    height: 43%;
+    background-image: url(../img/page/music-footer_01.png);
+    background-repeat: repeat-x;
+    position: relative;
+    bottom: -1px;
+}
+
+footer #foot-dtls{
+    background-color: #383838;
+    height: 57%;
+    
+}
+
+footer #foot-msc ,footer #foot-dtls {
+    width: 100%;
+    color: gray;
+}
+
+footer #foot-dtls img {
+    height: 50px;
+    width: 50px;  
+}
+
+footer #lg-img{
+    position: relative;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    /* background-color: aqua; */
+    width: 400px;
+}
+footer #lg-img span{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+}
+footer #foot-dtls ul {
+    position: absolute;
+    right: 5%;
+
+    height: 57%;
+    bottom: 0px;
+    list-style-type: none;
+}
+
+footer #foot-dtls ul li {
+    float: left;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 60px;
+    font-size: 16px;
+}
+
+footer #foot-dtls a{
+    color: gray;
+}
+
+footer #foot-dtls ul li#spac{
+    letter-spacing: 10px;
+    font-size: 20px;
+
 }
